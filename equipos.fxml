@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="co.edu.upn.arena.EquipoController"
+      spacing="12" styleClass="pagina">
+
+    <Label text="Equipos" styleClass="titulo"/>
+
+    <HBox spacing="8">
+        <TextField fx:id="txtNombre" promptText="Nombre del equipo"/>
+        <TextField fx:id="txtJuego" promptText="Videojuego"/>
+        <Button text="Crear equipo" onAction="#crear" styleClass="boton-principal"/>
+    </HBox>
+
+    <HBox spacing="16" VBox.vgrow="ALWAYS">
+        <VBox spacing="6">
+            <Label text="1. Elige un equipo" styleClass="subtitulo"/>
+            <ListView fx:id="listaEquipos" onMouseClicked="#verIntegrantes"/>
+        </VBox>
+        <VBox spacing="6">
+            <Label text="Integrantes" styleClass="subtitulo"/>
+            <ListView fx:id="listaIntegrantes"/>
+            <Button text="Quitar del equipo" onAction="#quitar"/>
+        </VBox>
+        <VBox spacing="6">
+            <Label text="2. Jugadores sin equipo" styleClass="subtitulo"/>
+            <ListView fx:id="listaLibres"/>
+            <Button text="Agregar al equipo" onAction="#agregar" styleClass="boton-principal"/>
+        </VBox>
+    </HBox>
+</VBox>

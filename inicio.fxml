@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="co.edu.upn.arena.InicioController"
+      spacing="20" styleClass="pagina">
+
+    <VBox spacing="4">
+        <Label text="¡Bienvenido a UPN Arena!" styleClass="titulo"/>
+        <Label text="Organiza, juega y sigue cada partido del torneo." styleClass="texto-suave"/>
+    </VBox>
+
+    <HBox spacing="16">
+        <VBox styleClass="tarjeta" HBox.hgrow="ALWAYS">
+            <Label fx:id="lblJugadores" text="0" styleClass="tarjeta-numero"/>
+            <Label text="Jugadores" styleClass="tarjeta-rotulo"/>
+        </VBox>
+        <VBox styleClass="tarjeta" HBox.hgrow="ALWAYS">
+            <Label fx:id="lblEquipos" text="0" styleClass="tarjeta-numero"/>
+            <Label text="Equipos" styleClass="tarjeta-rotulo"/>
+        </VBox>
+        <VBox styleClass="tarjeta" HBox.hgrow="ALWAYS">
+            <Label fx:id="lblPartidos" text="0" styleClass="tarjeta-numero"/>
+            <Label text="Partidos por jugar" styleClass="tarjeta-rotulo"/>
+        </VBox>
+        <VBox styleClass="tarjeta" HBox.hgrow="ALWAYS">
+            <Label fx:id="lblJugados" text="0" styleClass="tarjeta-numero"/>
+            <Label text="Partidos jugados" styleClass="tarjeta-rotulo"/>
+        </VBox>
+    </HBox>
+
+    <VBox styleClass="aviso" spacing="6">
+        <Label text="¿Por dónde empiezo?" styleClass="subtitulo"/>
+        <Label text="1. Registra a los participantes en Jugadores."/>
+        <Label text="2. Arma los grupos en Equipos."/>
+        <Label text="3. Programa los juegos y guarda los resultados en Partidos."/>
+        <Label text="4. Mira quién va ganando en Clasificación."/>
+    </VBox>
+</VBox>
